@@ -1,10 +1,10 @@
-@extends('layout');
+@extends('layout')
 
-@@section('content')
+@section('content')
     <h1>Posts</h1>
     <a href="{{route('posts.create')}}">Create New Post</a>
 
-    @@foreach ($posts as $post)
+    @foreach ($posts as $post)
         <div>
             <h2><a href="{{route('posts.show', $post->id)}}">{{$post->title}}</a></h2>
             <a href="{{route('posts.edit', $post->id)}}">Edit</a>
